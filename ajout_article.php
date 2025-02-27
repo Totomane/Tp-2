@@ -59,7 +59,7 @@ if (!empty($_POST['login']) && !empty($_POST['mdp']) && !empty($_POST['titre']) 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        if ($user['role'] == 'auteur') {
+        if ($user['role'] == 'auteur'|| $user['role'] === 'modérateur' ) {
             $req = "INSERT INTO Articles (id_aut, titre, corps, date_crea, date_modif) VALUES (?, ?, ?, NOW(), NOW())";
             $stmt = $bdd->prepare($req);
             $stmt->execute([$user['id_aut'], $titre, $corps]);

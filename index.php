@@ -43,7 +43,7 @@ if ($res) {
     echo "</table>";
     echo "<br>";
 } else {
-    echo "<p>Aucun article trouvé.</p>";
+    echo "<p>Aucun article trouvé</p>";
 }
 
 $res->closeCursor();

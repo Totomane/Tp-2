@@ -28,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for="pseudo">Pseudo</label>
     <input type="text" name="pseudo">
     <label for="commentaire">Commentaire</label>
-    <textarea name="commentaire" id="" cols="45" rows="3"></textarea>
+    <textarea name="commentaire" id="" cols="55" rows="0.5"></textarea>
     <input type="submit">
 </form>
