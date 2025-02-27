@@ -5,11 +5,11 @@
         var title = document.getElementById('title').value;
         var content = document.getElementById('content').value;
         if (title.length >= 255 || title == '') {
-            alert('Le titre ne doit pas dépasser 255 caractères et ne doit pas être vide.');
+            alert('Le titre est trop long >255');
             return false;
         }
         if (content == '') {
-            alert('Le contenu ne doit pas être vide.');
+            alert('Tu dois écrire qq chose');
             return false;
         }
         return true;

@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_article = $_POST['id_article'];
     $pseudo = $_POST['pseudo'];
     $commentaire = $_POST['commentaire'];
+
     $date_crea = date("Y-m-d H:i:s");
     $req = "INSERT INTO Commentaires (id_art, pseudo, contenu, date_crea) VALUES (?, ?, ?, ?)";
     $stmt = $bdd->prepare($req);
@@ -27,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for="pseudo">Pseudo</label>
     <input type="text" name="pseudo">
     <label for="commentaire">Commentaire</label>
-    <textarea name="commentaire" id="" cols="30" rows="10"></textarea>
+    <textarea name="commentaire" id="" cols="45" rows="3"></textarea>
     <input type="submit">
 </form>

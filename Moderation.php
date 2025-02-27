@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $comment = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($comment) {
-                if ($role === 'moderateur' || $comment['pseud   o'] === $pseudo) {
+                if ($role === 'modérateur' ) {
                     $req_delete = "DELETE FROM commentaires WHERE id_com = :id_com";
                     $stmt = $bdd->prepare($req_delete);
                     $stmt->execute(['id_com' => $id_com]);
